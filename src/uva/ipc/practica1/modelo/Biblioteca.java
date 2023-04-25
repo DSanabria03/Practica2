@@ -293,14 +293,11 @@ public class Biblioteca {
         if(ficheroSeleccionado.exists()){
             System.out.println("Ya existe ese fichero con ese nombre"); //Flag
             try{
-                BufferedWriter bw = new BufferedWriter(new FileWriter(ficheroSeleccionado));  // Para escribir en el fichero. Escribe en una línea completa en el fichero
+                BufferedWriter bw = new BufferedWriter(new FileWriter(ficheroSeleccionado, true));  // Para escribir en el fichero. Escribe en una línea completa en el fichero
                 
-                while(!historial.isEmpty()){
-                    bw.write("");
-                    libroAGuardar=historial.get(0);
-                    linea=(String)libroAGuardar.getTitulo()+";"+(String)libroAGuardar.getDescripcion()+";"+(String)libroAGuardar.getISBN()+";"+(String)libroAGuardar.getEstado()+";"+String.valueOf(libroAGuardar.getPrecio())+";"+String.valueOf(libroAGuardar.getLeido())+"\n";
-                    bw.write(linea);
-                    historial.remove(0);
+                for (Libro libro : historial) { 
+                    linea = libro.getTitulo() + ";" + libro.getDescripcion() + ";" + libro.getISBN() + ";" + libro.getEstado() + ";" + libro.getPrecio() + ";" + libro.getLeido() + "\n";
+                    bw.write(linea); 
                 }
                 bw.close();
             
@@ -309,16 +306,16 @@ public class Biblioteca {
             }catch(IOException e) {
                 System.out.println("Error al guardar, en la salida");
             }
+            
         }else{
             try{
                 BufferedWriter bw=new BufferedWriter(new FileWriter(ficheroSeleccionado));  // Para escribir en el fichero REVISAR
             
-                while(!historial.isEmpty()){
-                    libroAGuardar=historial.get(0);
-                    linea=(String)libroAGuardar.getTitulo()+";"+(String)libroAGuardar.getDescripcion()+";"+(String)libroAGuardar.getISBN()+";"+(String)libroAGuardar.getEstado()+";"+String.valueOf(libroAGuardar.getPrecio())+";"+String.valueOf(libroAGuardar.getLeido())+"\n";
-                    bw.write(linea);
-                    historial.remove(0);
+                for (Libro libro : historial) { 
+                    linea = libro.getTitulo() + ";" + libro.getDescripcion() + ";" + libro.getISBN() + ";" + libro.getEstado() + ";" + libro.getPrecio() + ";" + libro.getLeido() + "\n";
+                    bw.write(linea); 
                 }
+                bw.close();
             
             }catch(FileNotFoundException e){
                 System.out.println("Error al guardar el fichero");
