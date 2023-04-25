@@ -302,25 +302,29 @@ public class Biblioteca {
                     bw.write(linea);
                     historial.remove(0);
                 }
+                bw.close();
             
-            }catch(Exception e){
-                System.out.println("error al guardar el fichero");
+            }catch(FileNotFoundException e){
+                System.out.println("Error al guardar el fichero");
+            }catch(IOException e) {
+                System.out.println("Error al guardar, en la salida");
             }
         }else{
             try{
                 BufferedWriter bw=new BufferedWriter(new FileWriter(ficheroSeleccionado));  // Para escribir en el fichero REVISAR
             
                 while(!historial.isEmpty()){
-                libroAGuardar=historial.get(0);
-                linea=(String)libroAGuardar.getTitulo()+";"+(String)libroAGuardar.getDescripcion()+";"+(String)libroAGuardar.getISBN()+";"+(String)libroAGuardar.getEstado()+";"+String.valueOf(libroAGuardar.getPrecio())+";"+String.valueOf(libroAGuardar.getLeido())+"\n";
-                bw.write(linea);
-                historial.remove(0);
+                    libroAGuardar=historial.get(0);
+                    linea=(String)libroAGuardar.getTitulo()+";"+(String)libroAGuardar.getDescripcion()+";"+(String)libroAGuardar.getISBN()+";"+(String)libroAGuardar.getEstado()+";"+String.valueOf(libroAGuardar.getPrecio())+";"+String.valueOf(libroAGuardar.getLeido())+"\n";
+                    bw.write(linea);
+                    historial.remove(0);
                 }
             
-            }catch(Exception e){
-                System.out.println("error al guardar el fichero");
+            }catch(FileNotFoundException e){
+                System.out.println("Error al guardar el fichero");
+            }catch(IOException e) {
+                System.out.println("Error al guardar, en la salida");
             }
         }
-        
-    } 
+    }
 }
