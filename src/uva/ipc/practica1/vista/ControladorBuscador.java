@@ -47,14 +47,10 @@ public class ControladorBuscador {
     
 //    A partir de un fichero, añade libros a la aplicación. si mantenerLista==0, se borra lista, si mantenerLista==1, se guarda
     public void procesaEventoAddLibrosFichero(DefaultListModel <String> lista,String ruta, int mantenerLista) {
-        //hacer lo del filechooser
-        
         int tipoError=miBiblioteca.cargarFichero(ruta,mantenerLista);
         ArrayList<Libro> historial = this.miBiblioteca.getHistorial();
         String [][] datosTabla=this.miBiblioteca.creaListaTable(historial);
         miVista.cargarTabla(datosTabla);
-        //miVista.cargaLista(lista, historial);
-        
     }
 
     public void procesaEventoGuardarLibros(File archivoSeleccionado) {

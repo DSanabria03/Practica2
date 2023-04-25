@@ -1,11 +1,7 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
 import javax.swing.DefaultListModel;
 //FICHERO CONTRASTARLO AQUÍ
 //TRATAR ERRORES AQUÍ
-/**
- *
  */
 package uva.ipc.practica1.modelo;
 
@@ -20,7 +16,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 import javax.swing.DefaultListModel;
-/*
+/**
  * @author saant
  */
 public class Biblioteca {
@@ -179,7 +175,6 @@ public class Biblioteca {
         return lTable;
     }
     
-    
     public String [][] ordenarLista(ArrayList <Libro> historial,boolean ordenAlfabetico){
         if(ordenAlfabetico){
             Collections.sort(historial);
@@ -194,8 +189,7 @@ public class Biblioteca {
         return creaListaTable(historial);
     }
     
-    
-     //Método que lee el fichero importado y guarda los libros 
+    //Método que lee el fichero importado y guarda los libros 
     public int cargarFichero(String ruta,int mantenerLista) {
         String datos;
         int tipoError=0;
@@ -284,12 +278,10 @@ public class Biblioteca {
         }
         return true;
     } 
-//throws IOException
+
     public void guardarFichero(File ficheroSeleccionado) {
         Libro libroAGuardar;
         String linea;
-        //String sFichero="listalibros.txt";
-        //File fichero=new File(ruta);
         if(ficheroSeleccionado.exists()){
             System.out.println("Ya existe ese fichero con ese nombre"); //Flag
             try{
@@ -309,7 +301,7 @@ public class Biblioteca {
             
         }else{
             try{
-                BufferedWriter bw=new BufferedWriter(new FileWriter(ficheroSeleccionado));  // Para escribir en el fichero REVISAR
+                BufferedWriter bw = new BufferedWriter(new FileWriter(ficheroSeleccionado, true));  
             
                 for (Libro libro : historial) { 
                     linea = libro.getTitulo() + ";" + libro.getDescripcion() + ";" + libro.getISBN() + ";" + libro.getEstado() + ";" + libro.getPrecio() + ";" + libro.getLeido() + "\n";
