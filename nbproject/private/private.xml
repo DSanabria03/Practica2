@@ -4,9 +4,13 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/danie/Desktop/Neon2/AplicacionBiblioteca/Practica1/src/uva/ipc/practica1/vista/VistaBuscador.java</file>
+            <file>file:/C:/Users/danie/Desktop/Neon2/AplicacionBiblioteca/Practica1/src/uva/ipc/practica1/vista/GestorVistas.java</file>
             <file>file:/C:/Users/danie/Desktop/Neon2/AplicacionBiblioteca/Practica1/src/uva/ipc/practica1/modelo/Biblioteca.java</file>
-            <file>file:/C:/Users/danie/Desktop/Neon2/AplicacionBiblioteca/Practica1/src/uva/ipc/practica1/main/Main.java</file>
+            <file>file:/C:/Users/danie/Desktop/Neon2/AplicacionBiblioteca/Practica1/src/uva/ipc/practica1/modelo/Libro.java</file>
+            <file>file:/C:/Users/danie/Desktop/Neon2/AplicacionBiblioteca/Practica1/src/uva/ipc/practica1/vista/ControladorEdicionManual.java</file>
             <file>file:/C:/Users/danie/Desktop/Neon2/AplicacionBiblioteca/Practica1/src/uva/ipc/practica1/vista/ControladorBuscador.java</file>
+            <file>file:/C:/Users/danie/Desktop/Neon2/AplicacionBiblioteca/Practica1/src/uva/ipc/practica1/vista/VistaEdicionManual.java</file>
+            <file>file:/C:/Users/danie/Desktop/Neon2/AplicacionBiblioteca/Practica1/src/uva/ipc/practica1/vista/VistaMenu.java</file>
         </group>
     </open-files>
 </project-private>

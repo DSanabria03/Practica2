@@ -25,7 +25,6 @@ public class VistaBuscador extends javax.swing.JFrame {
     private Biblioteca miBiblioteca;
     private boolean buscarTitulo;
     private DefaultListModel <String> lista = new DefaultListModel<>();
-    ArrayList <Libro> historialAux=miBiblioteca.getHistorial();
     /**
      * Creates new form VistaBuscador
      */
@@ -329,6 +328,7 @@ public class VistaBuscador extends javax.swing.JFrame {
     }
     
     public void cargarLibrosManual(){
+        ArrayList<Libro> historial = this.miBiblioteca.getHistorial();
         
     }
     

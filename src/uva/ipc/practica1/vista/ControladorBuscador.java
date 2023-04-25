@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package uva.ipc.practica1.vista;
 
 import java.io.File;
@@ -67,6 +63,12 @@ public class ControladorBuscador {
         ArrayList<Libro> historial = this.miBiblioteca.getHistorial();
         String [][] datosTabla=miBiblioteca.ordenarLista(historial,false);
         miVista.cargarTabla(datosTabla);
+    }
+    
+    public void procesaEnviar(ArrayList<Libro> historial){
+        /*
+        
+        */
     }
 
     public void procesaEventoVolver() {

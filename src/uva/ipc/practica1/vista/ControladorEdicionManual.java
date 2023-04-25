@@ -120,7 +120,11 @@ public class ControladorEdicionManual {
         this.miVista.setLibroLista(lista,libroNuevo,index);
         this.miVista.mostrarMensaje("Datos del libro actualizados correctamente",false);
     }  
-
+    
+    public void enviarModeloHistorial(ArrayList<Libro> historial){
+        miBiblioteca.setHistorial(historial);
+    }
+    
     public void procesaEventoVolverAMenu() {
         Main.getGestorVistas().mostrarVistaMenu();
     }

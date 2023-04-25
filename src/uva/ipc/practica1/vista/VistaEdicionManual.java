@@ -326,6 +326,9 @@ public class VistaEdicionManual extends javax.swing.JFrame {
         leidoCheckBox.setSelected((historial.get(index).getLeido()));
     }
     
+    public void enviarHistorial(ArrayList <Libro> historial){
+        miControlador.enviarModeloHistorial(historial);
+    }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ISBNLabel;

@@ -37,6 +37,10 @@ public class Biblioteca {
     public ArrayList<Libro> getHistorial(){
         return this.historial;
     }
+    
+    public void setHistorial(ArrayList<Libro> historial){
+        this.historial = historial;
+    }
    
     public void addEntradaHistorial(Libro entrada){
         this.historial.add(entrada);
