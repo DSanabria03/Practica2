@@ -224,7 +224,7 @@ public class VistaBuscador extends javax.swing.JFrame {
     private void guardarLibrosMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarLibrosMenuItemActionPerformed
         JFrame frame=new JFrame("Guardar en un fichero");
         JFileChooser fileChooser = new JFileChooser();
-        fileChooser.setDialogTitle("Selecciona un archivo");
+        fileChooser.setDialogTitle("Save");
         FileNameExtensionFilter filter = new FileNameExtensionFilter("Archivos de texto (*.txt)", "txt");
         fileChooser.setFileFilter(filter);
         int seleccion = fileChooser.showOpenDialog(frame);
