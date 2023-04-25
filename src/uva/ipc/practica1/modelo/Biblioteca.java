@@ -156,7 +156,7 @@ public class Biblioteca {
         return lTable;
     }
     
-//    busca libros en el jtextfield
+    // busca libros en el jtextfield
     public String [][] buscaLibros(boolean buscarTitulo,String cadena){
         ArrayList<Libro> listaAux=new ArrayList<>();
         Libro libroAAnalizar;

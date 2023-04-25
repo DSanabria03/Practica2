@@ -327,11 +327,6 @@ public class VistaBuscador extends javax.swing.JFrame {
         librosDefaultTable.fireTableDataChanged();
     }
     
-    public void cargarLibrosManual(){
-        ArrayList<Libro> historial = this.miBiblioteca.getHistorial();
-        
-    }
-    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem addLibrosFicheroMenuItem;
     private javax.swing.JMenu archivoMenu;

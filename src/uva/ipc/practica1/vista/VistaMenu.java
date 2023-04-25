@@ -11,6 +11,7 @@ import uva.ipc.practica1.modelo.Biblioteca;
 public class VistaMenu extends javax.swing.JFrame {
     
     private ControladorMenu miControlador;
+    private ControladorBuscador miBuscador;
     /**
      * Creates new form VistaMenu
      */
@@ -105,8 +106,8 @@ public class VistaMenu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buscadorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscadorButtonActionPerformed
+        //miBuscador.procesaEnviar();
         miControlador.procesaEventoIrABuscador();
-        
     }//GEN-LAST:event_buscadorButtonActionPerformed
 
     private void edicManualButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edicManualButtonActionPerformed

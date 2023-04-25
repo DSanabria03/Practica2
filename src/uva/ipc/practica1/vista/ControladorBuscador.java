@@ -38,7 +38,6 @@ public class ControladorBuscador {
         String cadena=miVista.getCadenaBuscar();
         String [][] datosTabla=miBiblioteca.buscaLibros(buscarTitulo,cadena);
         miVista.cargarTabla(datosTabla);
-        
     }
     
 //    A partir de un fichero, añade libros a la aplicación. si mantenerLista==0, se borra lista, si mantenerLista==1, se guarda
@@ -65,10 +64,10 @@ public class ControladorBuscador {
         miVista.cargarTabla(datosTabla);
     }
     
-    public void procesaEnviar(ArrayList<Libro> historial){
-        /*
-        
-        */
+    public void procesaEnviar(){
+        ArrayList<Libro> historial = this.miBiblioteca.getHistorial();
+        String[][] datas = this.miBiblioteca.creaListaTable(historial);
+        miVista.cargarTabla(datas);
     }
 
     public void procesaEventoVolver() {
